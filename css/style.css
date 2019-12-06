@@ -1,0 +1,275 @@
+body {
+   height: 100vh;
+   font-family: 'Press Start 2P', cursive;
+   text-align: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+   background-color: darkgray;
+   width: fit-content;
+   margin: auto;
+}
+#settings {
+   height: 100px;
+   display: grid;
+   flex-direction: column;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas:
+      "columns settings-btn"
+      "rows settings-btn";
+}
+input {
+   font-family: 'Press Start 2P', cursive;
+   font-size: 12px;
+   line-height: 32.5px;
+   height: 25px;
+   margin: 7.5px 0 0 0;
+   width: 90px;
+   text-align: center;
+}
+#columns {
+   grid-area: columns;
+}
+#rows {
+   grid-area: rows;
+}
+#columns, #rows {
+   display: flex;
+   flex-grow: 1;
+   flex-direction: row-reverse;
+   margin: 0 30px 0 0;
+}
+#columns p, #rows p{
+   font-size: 12px;
+   line-height: 25px;
+}
+#settings-btn {
+   grid-area: settings-btn;
+   justify-self: start;
+   margin-left: 30px;
+}
+#settings-button {
+   font-family: 'Press Start 2P', cursive;
+   font-size: 9px;
+   height: 80px;
+   width: 150px;
+   margin: 7.5px;
+   background-color: lightgrey;
+   border-top: 5px solid white;
+   border-right: 5px solid white;
+   border-bottom: 5px solid grey;
+   border-left: 5px solid grey;
+}
+#settings-button:hover {
+   cursor: pointer;
+}
+#complete-board {
+   display: inline-block;
+   background-color: lightgray;
+   border-top: 10px solid white;
+   border-right: 10px solid white;
+   border-bottom: 10px solid grey;
+   border-left: 10px solid grey;
+   /* border: 10px solid lightgrey; */
+   padding: 30px;
+}
+#top-board {
+   grid-area: top-board;
+   /* height: 60px; */
+   background-color: lightgrey;
+   border-top: 5px solid white;
+   border-right: 5px solid white;
+   border-bottom: 5px solid grey;
+   border-left: 5px solid grey;
+   font-family: 'Segment7Standard';
+   font-weight: normal;
+   font-style: italic;
+   display: grid;
+   margin: 0 0 15px 0;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas:
+      "timer start-btn num-bombs";
+}
+#top-board div:first-child {
+   text-align: left;
+   margin: 0 0 0 20px;
+}
+#top-board div:nth-child(2) {
+   display: grid;
+}
+#top-board div:last-child{
+   text-align: right;
+   margin: 0 20px 0 0;
+}
+#timer {
+   grid-area: timer;
+   flex-grow: 1;
+}
+#timer p, #num-bombs p {
+   color: red;
+   font-size: 35px;
+}
+#start-btn {
+   grid-area: start-btn;
+   width: 55px;
+   height: 55px;
+   margin: 5px;
+   background-color: lightgrey;
+   border-top: 2px solid white;
+   border-right: 2px solid white;
+   border-bottom: 2px solid grey;
+   border-left: 2px solid grey;
+}
+#start-btn:hover {
+   cursor: pointer;
+}
+.start {
+   background-image: url('../images/emoji-001.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   text-align: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+}
+.playing {
+   background-image: url('../images/emoji-002.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   text-align: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+}
+.lose {
+   background-image: url('../images/emoji-003.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   text-align: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+}
+.win {
+   background-image: url('../images/emoji-004.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   text-align: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+}
+#num-bombs {
+   grid-area: num-bombs;
+   flex-grow: 1;
+}
+#board {
+   grid-area: board;
+   text-align: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+   display: grid;
+   /* grid-template-columns: repeat(15, 35px);
+   grid-template-rows: repeat(15, 35px); */
+   grid-column-gap: 5px;
+   grid-row-gap: 5px;
+
+}
+#bottom-board {
+   grid-area: bottom-board;
+   /* height: 30px;
+   background-color: yellow; */
+}
+.cell {
+   background-color: lightgray;
+   height: 30px;
+   width: 30px;
+   line-height: 30px;
+   border-left: 5px solid grey;
+   border-bottom: 5px solid grey;
+   border-right: 5px solid white;
+   border-top: 5px solid white;
+}
+.cell:hover {
+   cursor: pointer;
+   background-color: darkgrey;
+}
+.flagged {
+   background-image: url('../images/flag.png');
+   background-size: cover;
+   background-color: lightgray;
+}
+.clicked {
+   border: 1px solid darkgrey;
+}
+.clicked:hover {
+   background-color: lightgray;
+   cursor: auto;
+}
+div.clicked.bomb {
+   background-image: url('../images/explosion.png');
+   background-size: cover;
+   background-color: lightgray;
+   font-size: 0;
+}
+div.reveal.bomb {
+   background-image: url('../images/bomb.png');
+   background-size: cover;
+   background-color: lightgray;
+   font-size: 0;
+}
+div.clicked.empty {
+   background-color: lightgray;
+   font-size: 0;
+}
+
+div.clicked.one, div.reveal.one {
+   color: green;
+}
+div.clicked.two, div.reveal.two {
+   color: blue;
+}
+div.clicked.three, div.reveal.three {
+   color: yellow;
+}
+div.clicked.four, div.reveal.four{
+   color: darkorchid;
+}
+div.clicked.five, div.reveal.five {
+   color: mediumturquoise;
+}
+div.clicked.six, div.reveal.six {
+   color: darkcyan;
+}
+div.clicked.seven, div.reveal.seven {
+   color: balck;
+}
+div.clicked.eight, div.reveal.eight {
+   color: red;
+}
+footer {
+   display: flex;
+   text-align: center;
+   align-content: center;
+   align-items: center;
+   justify-content: center;
+   bottom: 0;
+   height: 50px;
+   line-height: 50px;
+   font-family: 'Fredoka One', cursive;
+}
+footer a {
+   text-decoration: none;
+   color: black;
+}
+footer span {
+   font-family: 'Dancing Script', cursive;
+   font-size: 15px;
+}
+footer img {
+   height: 20px;
+   width: 20px;
+}
