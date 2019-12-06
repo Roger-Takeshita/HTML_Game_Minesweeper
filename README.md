@@ -2,6 +2,7 @@
 
 # Links
 
+* [Minesweeper - Gameplay](http://roger-takeshita.github.io/game-minesweeper)
 * [Origintal Project](https://github.com/Roger-Takeshita/Bootcamp-Software-Engineer/tree/master/004%20-%20Week%203/Project%201%20-%20Mineseweeper)
 
 <h1 id="summary">Summary</h1>
@@ -108,22 +109,22 @@
 
 <img width="2%" height="2%" alt="gameplay" src="./images/emoji-004.png"> = Win
 
-<img width="20%" height="20%" alt="gameplay" src="./images/readme/game-play-002.jpg">
+<img width="40%" height="40%" alt="gameplay" src="./images/readme/game-play-002.jpg">
 
-<img width="20%" height="20%" alt="gameplay" src="./images/readme/game-play-003.jpg">
+<img width="40%" height="40%" alt="gameplay" src="./images/readme/game-play-003.jpg">
 
 * Each number correspond to the number of bombs around the current cell
 
-<img width="20%" height="20%" alt="gameplay" src="./images/readme/game-play-004.jpg">
+<img width="40%" height="40%" alt="gameplay" src="./images/readme/game-play-004.jpg">
 
 * Right click to add flags (meaning you found a bomb)
 
-<img width="20%" height="20%" alt="gameplay" src="./images/readme/game-play-005.jpg">
+<img width="40%" height="40%" alt="gameplay" src="./images/readme/game-play-005.jpg">
 
 * You Win!
 
-<img width="20%" height="20%" alt="gameplay" src="./images/readme/game-play-006.jpg">
+<img width="40%" height="40%" alt="gameplay" src="./images/readme/game-play-006.jpg">
 
 * You lose!
 
-<img width="20%" height="20%" alt="gameplay" src="./images/readme/game-play-007.jpg">
+<img width="40%" height="40%" alt="gameplay" src="./images/readme/game-play-007.jpg">
